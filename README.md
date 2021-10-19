@@ -40,6 +40,19 @@ package.json
   "prettier:fix": "prettier --write \"src/**/(**.tsx|*.ts|*.scss|*.css)\""
 ```
 
+.prettierrc
+```
+{
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 120,
+  "semi": true,
+  "jsxSingleQuote": false,
+  "endOfLine": "lf"
+}
+```
 Cách sửa khi bị lỗi
 Error while loading rule 'prettier/prettier': context.getPhysicalFilename is not a function
 Lỗi này xảy ra do ESLint của Create React App đang dùng phiên bản thấp hơn phiên bản mà eslint-plugin-prettier yêu cầu, vì thế chúng ta cần update ESLint của CRA bằng cách chạy:
